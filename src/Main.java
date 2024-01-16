@@ -38,6 +38,7 @@ class polynome{                     //Définition de la classe
         }
         this.P1 = a;
         this.P2 = b;
+        sc.close(); // Close the Scanner object
     }
 
     polynome(int a, double[] b) {                   //Constructeur
@@ -174,7 +175,8 @@ class polynome{                     //Définition de la classe
         for(int i = 0; i < a; i++){
             tab[i] = new polynome();
         }
-    return tab;
+        sc.close(); // Close the Scanner object
+        return tab;
     }
 
     public ArrayList<polynome> tableauPolynomeArray(){
@@ -185,7 +187,8 @@ class polynome{                     //Définition de la classe
         for(int i = 0; i < a; i++){
             tab.set(i, new polynome());
         }
-    return tab;
+        sc.close(); // Close the Scanner object
+        return tab;
     } 
 
     public polynome[] sommeTableauP(polynome[] tab1, polynome[] tab2){
@@ -224,6 +227,7 @@ class polynomeCreux {
             System.out.println("Valeure ");
             b[i][0] = sc.nextDouble();
         }
+        sc.close(); // Close the Scanner object
         this.P1 = b;
     }
 
